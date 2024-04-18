@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

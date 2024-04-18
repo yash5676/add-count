@@ -1,34 +1,35 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 
-function MyButton() {
-  return (
-    <>
-    <button id="clicked()">{count}</button>
-   <p>hello</p>
-   </>
-  );
-}
+
 
 
 function App() {
- const[count,setcount]=useState(0);
+ const[count,setCount]=useState(0);
+
+ const increasecount=()=>{
+  setCount(count+1);
+ };
+ const decreasecount=()=>{
+  setCount(count-1);
+ };
+
 
   return (
-    <>
-      
+    <div className="App">
+    <h1>count: {count}</h1>
+      <button onClick={increasecount}>Increase</button>
+       <button onClick={decreasecount}>Decrease</button>
        
-       <h1>welcome to my app</h1>
-      <MyButton/>
-
+</div>
        
         
       
-    </>
+    
   );
 }
 
-export default App
+export default App;
