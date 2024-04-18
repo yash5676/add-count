@@ -4,25 +4,25 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 
-function MyButton() {
-  return (
-    <>
-    <button id="clicked()">{count}</button>
-   <p>hello</p>
-   </>
-  );
-}
+
 
 
 function App() {
  const[count,setcount]=useState(0);
 
+ const increase=()=>{
+  setcount(count+2);
+ }
+ const decrease=()=>{
+  setcount(count-2);
+ }
   return (
     <>
       
-       
-       <h1>welcome to my app</h1>
-      <MyButton/>
+       <h1>count={count}</h1>
+       <button onClick={increase}>increase</button>
+       <button onClick={decrease}>decrease</button>
+      
 
        
         
